@@ -1,0 +1,18 @@
+{
+    "name": "laronic/lumen-resource",
+    "description": "A helper method for easily creating resource routes in lumen.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fred Myerscough",
+            "email": "oniice@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/ResourceRoute.php"
+        ]
+    },
+    "require": {}
+}
