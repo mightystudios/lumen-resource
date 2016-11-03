@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Laronic\\Lumen\\Resource": "src/Lumen"
+            "Laronic\\Lumen\\Resource\\": "src/Lumen/"
         },
         "files": [
             "src/ResourceRoute.php"
