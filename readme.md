@@ -37,10 +37,32 @@ Use this in your routes file, to create resourceful routes, the function require
   * e.g. `['destroy']` will turn of the destroy route.
 
 
-## Exxample Usage ##
+## Example Usage ##
 
-```
+```php
 // app/Http/routes.php
 
 resource('users', \App\Http\Controllers\UsersController::class, 'api.users', ['destroy']);
 ```
+
+
+# CORS/OPTIONS Requests
+
+To allowed OPTIONS requests used for CORS, register the OptionsRequestServiceProvider.
+
+```php
+// bootstrap/app.php
+
+ $app->register(\Laronic\Lumen\Resource\Providers\OptionsRequestServiceProvider::class);
+```
+
+To accept CORS request enable the CorsMiddleware middleware class
+
+```php
+// bootstrap/app.php
+
+ $app->routeMiddleware([
+     'cors' => \Laronic\Lumen\Resource\Middleware\CorsMiddleware::class,
+ ....
+ ]);
+ ```
